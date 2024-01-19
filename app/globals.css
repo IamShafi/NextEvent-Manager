@@ -347,3 +347,44 @@ body {
   filter: brightness(0) invert(100%);
 }
 
+.choose-title {
+  font-size: 50px;
+    color: #1c1d1b;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+
+
+
+.bd-choose__wrapper.choose-wrapper__left {
+  padding-right: 70px;
+}.bd-choose__item {
+  display: flex;
+  margin-bottom: 50px;
+}.text-end {
+  text-align: right!important;
+}.bd-choose__icon.choose-icon__left {
+  margin-left: 30px;
+}.bd-choose__wrapper.choose-wrapper__right {
+  padding-left: 70px;
+}
+.bd-choose__item {
+  display: flex;
+  margin-bottom: 50px;
+}.text-end {
+  text-align: right!important;
+}
+.text-end .h4{
+  font-weight: bold;
+}
+.bd-choose__icon.choose-icon__left {
+  margin-left: 30px;
+}
+.bd-choose__thumb {
+  width: 472px;
+  height: 537px;
+}
+.icon__left {
+  margin-left: 30px;
+}
