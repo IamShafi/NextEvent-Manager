@@ -275,3 +275,75 @@ body {
   background-color: #624cf5 !important;
 }
 
+
+.circle::before,
+.circle-second::before,
+.circle-third::before {
+  content: "";
+  background: url("/public/assets/bg-pattern-circle.svg");
+  width: 48.75rem;
+  height: 48.75rem;
+  position: absolute;
+  z-index: -1;
+}
+.circle::before {
+  top: -11%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle-second::before {
+  top: -88%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.subtitle {
+  font-size: clamp(2rem, 1.7143rem + 1.4286vw, 3rem);
+  font-weight: 400;
+  line-height: 3.5rem;
+  letter-spacing: -0.0231rem;
+}
+
+.subtitle-aux {
+  font-size: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: -0.0154rem;
+}
+
+.content {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.p-btn {
+  padding: 1rem 1.5313rem 0.875rem 1.6563rem;
+}
+
+.p-btn-aux {
+  padding: 0.9375rem 2rem 0.8125rem 1.9375rem;
+}
+.controller {
+  font-size: 0.9375rem;
+  line-height: normal;
+  @apply rounded-full font-semibold  text-white transition-all;
+}
+.controller-white {
+  border: 0.0625rem solid white;
+  @apply text-white hover:bg-white hover:text-police-blue;
+}
+.container {
+  padding-inline: 1.25rem;
+  margin-inline: auto;
+}
+
+.container-small {
+  padding-inline: 1.25rem;
+  margin-inline: auto;
+}
+.filter-white {
+  filter: brightness(0) invert(100%);
+}
+
