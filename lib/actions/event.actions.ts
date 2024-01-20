@@ -1,11 +1,13 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
-
+import { auth } from "@clerk/nextjs";
+// import from database
 import { connectToDatabase } from '@/lib/database'
 import Event from '@/lib/database/models/event.model'
 import User from '@/lib/database/models/user.model'
 import Category from '@/lib/database/models/category.model'
+// import utils
 import { handleError } from '@/lib/utils'
 
 import {
@@ -29,12 +31,21 @@ const populateEvent = (query: any) => {
 
 // CREATE
 export async function createEvent({ userId, event, path }: CreateEventParams) {
+  // const { sessionClaims } = auth();
+  // const sessionId = sessionClaims?.userId as string;
   try {
+    
     await connectToDatabase()
 
-    const organizer = await User.findById(userId)
-    if (!organizer) throw new Error('Organizer not found')
+    // const organizer = await User.findById(userId)
+    // if (!organizer) throw new Error('Organizer not found')
 
+     // Find the user by 'clerkId'
+     const organizer = await User.findOne({ clerkId: userId });
+     if (!organizer) throw new Error('Organizer not found')
+     else{
+      userId = organizer._id;
+    }
     const newEvent = await Event.create({ ...event, category: event.categoryId, organizer: userId })
     revalidatePath(path)
 
