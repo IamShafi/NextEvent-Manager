@@ -2,15 +2,13 @@
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
-- Node.js
 - Next.js
 - TypeScript
 - TailwindCSS
-- Stripe
-- Zod
 - React Hook Form
 - Shadcn
-- uploadthing
+- clerk
+- Node.js
 
 ## <a name="features">🔋 Features</a>
 
@@ -30,11 +28,6 @@
     
 👉 **New Category:** Dynamic categorization allows for the seamless addition of new event categories, keeping your platform adaptable.
     
-👉 **Checkout and Pay with Stripe:** Smooth and secure payment transactions using Stripe, enhancing user experience during the checkout process.
-    
-👉 **Event Orders:** Comprehensive order management system, providing a clear overview of all event-related transactions.
-    
-👉 **Search Orders:** Quick and efficient search functionality for orders, facilitating easy tracking and management.
 
 
 Follow these steps to set up the project locally on your machine.
