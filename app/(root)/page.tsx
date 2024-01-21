@@ -1,6 +1,7 @@
 import CategoryFilter from "@/components/shared/CategoryFilter";
 import Collection from "@/components/shared/Collection";
 import Search from "@/components/shared/Search";
+import HeaderLottie from "@/components/shared/HeaderLottie";
 import { Button } from "@/components/ui/button";
 import { getAllEvents } from "@/lib/actions/event.actions";
 import { SearchParamProps } from "@/types";
@@ -87,14 +88,15 @@ export default async function Home({ searchParams }: SearchParamProps) {
             </Button>
           </div>
           {/* right hero section */}
-          <Image
+          {/* <Image
             src="/assets/images/hero.png"
             alt="hero"
             width={1000}
             height={1000}
             className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
-          />
+          /> */}
           {/* <Lottie animationData={animationData}  /> */}
+          <HeaderLottie />
         </div>
       </section>
       {/* about */}
