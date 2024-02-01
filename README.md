@@ -10,6 +10,8 @@
 - clerk
 - Node.js
 
+![desktop-preview](https://github.com/IamShafi/NextEvent-Manager/blob/master/public/assets/images/HomePage.png)
+
 ## <a name="features">🔋 Features</a>
 
 👉 **Authentication (CRUD) with Clerk:** User management through Clerk, ensuring secure and efficient authentication.
