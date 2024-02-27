@@ -11,6 +11,7 @@
 - Node.js
 
 ![desktop-preview](https://github.com/IamShafi/NextEvent-Manager/blob/master/public/assets/images/HomePage.png)
+![desktop-preview](https://github.com/IamShafi/NextEvent-Manager/blob/master/public/assets/images/createPage.png)
 
 ## <a name="features">🔋 Features</a>
 
