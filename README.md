@@ -4,11 +4,19 @@
 
 - Next.js
 - TypeScript
-- TailwindCSS
+- Mongodb
+- TailwindCSS - tailwind-merge - tailwindcss-animate
 - React Hook Form
+- React date picker
 - Shadcn
 - clerk
 - Node.js
+- Zod
+- Uploadthing
+- Stripe
+- Framer Motion
+- LottieFiles
+- Sonner
 
 ![desktop-preview](https://github.com/IamShafi/NextEvent-Manager/blob/master/public/assets/images/HomePage.png)
 ![desktop-preview](https://github.com/IamShafi/NextEvent-Manager/blob/master/public/assets/images/createPage.png)
