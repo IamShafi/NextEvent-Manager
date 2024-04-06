@@ -182,3 +182,27 @@ export async function getRelatedEventsByCategory({
     handleError(error)
   }
 }
+
+// GET EVENTS BY CATEGORY
+export async function getEventsByCategory({ category, limit = 6, page = 1 }: { category: string; limit?: number; page?: number }) {
+  try {
+    await connectToDatabase();
+
+    const categoryCondition = await getCategoryByName(category);
+    if (!categoryCondition) throw new Error('Category not found');
+
+    const skipAmount = (page - 1) * limit;
+
+    const eventsQuery = Event.find({ category: categoryCondition._id })
+      .sort({ createdAt: 'desc' })
+      .skip(skipAmount)
+      .limit(limit);
+
+    const events = await populateEvent(eventsQuery);
+    const eventsCount = await Event.countDocuments({ category: categoryCondition._id });
+
+    return { data: JSON.parse(JSON.stringify(events)), totalPages: Math.ceil(eventsCount / limit) };
+  } catch (error) {
+    handleError(error);
+  }
+}
