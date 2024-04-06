@@ -28,3 +28,17 @@ export const getAllCategories = async () => {
     handleError(error)
   }
 }
+
+// GET CATEGORY BY ID
+export const getCategoryById = async (categoryId : CreateCategoryParams) => {
+  try {
+    await connectToDatabase();
+
+    const category = await Category.findById(categoryId);
+    if (!category) throw new Error('Category not found');
+
+    return JSON.parse(JSON.stringify(category));
+  } catch (error) {
+    handleError(error);
+  }
+};
