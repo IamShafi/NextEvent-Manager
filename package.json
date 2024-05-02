@@ -27,7 +27,7 @@
     "framer-motion": "^10.18.0",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.294.0",
-    "mongodb": "^6.3.0",
+    "mongodb": "^6.5.0",
     "mongoose": "^8.0.3",
     "next": "14.0.4",
     "query-string": "^8.1.0",
